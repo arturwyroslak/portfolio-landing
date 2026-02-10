@@ -3,19 +3,21 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>Imię Nazwisko — Frontend Developer</title>
-  <meta name="description" content="Portfolio — frontend developer. Interaktywne projekty, umiejętności, kontakt.">
+  <title>Imi9 Nazwisko  Frontend Developer</title>
+  <meta name="description" content="Portfolio  frontend developer. Interaktywne projekty, umiej9tnoci, kontakt.">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <header class="site-header">
-    <nav class="nav container">
-      <a class="brand" href="#">Imię Nazwisko</a>
-      <button class="nav-toggle" aria-expanded="false" aria-controls="primary-menu">Menu</button>
+  <header class="site-header" role="banner">
+    <nav class="nav container" role="navigation" aria-label="G2wne">
+      <a class="brand" href="#">Imi9 Nazwisko</a>
+      <button class="nav-toggle" aria-expanded="false" aria-controls="primary-menu" aria-label="Poka menu">
+        <span class="hamburger" aria-hidden="true"></span>
+      </button>
       <ul id="primary-menu" class="nav-list" hidden>
         <li><a href="#about">O mnie</a></li>
-        <li><a href="#skills">Umiejętności</a></li>
+        <li><a href="#skills">Umiej9tnoci</a></li>
         <li><a href="#projects">Projekty</a></li>
         <li><a href="#contact">Kontakt</a></li>
       </ul>
@@ -23,13 +25,13 @@
   </header>
 
   <main>
-    <section class="hero">
+    <section class="hero" aria-label="Wprowadzenie">
       <div class="container hero-inner">
-        <h1 class="hero-title">Cześć, jestem <span class="accent">Imię</span><br>Tworzę interfejsy które działają.</h1>
-        <p class="hero-sub">Frontend Developer • React, TypeScript, Animacje CSS & JS</p>
-        <p>
+        <h1 class="hero-title">Czeb, jestem <span class="accent">Imi9</span><br>Tworz interfejsy, ktre dziaaj.</h1>
+        <p class="hero-sub">Frontend Developer  React, TypeScript, Animacje CSS & JS</p>
+        <p class="hero-ctas">
           <a class="btn btn-primary" href="#projects">Zobacz projekty</a>
-          <a class="btn" href="#contact">Skontaktuj się</a>
+          <a class="btn" href="#contact">Skontaktuj si</a>
         </p>
       </div>
       <svg class="hero-bg" aria-hidden="true" viewBox="0 0 800 600" preserveAspectRatio="xMidYMid slice">
@@ -44,11 +46,11 @@
       </svg>
     </section>
 
-    <section id="about" class="about container">
+    <section id="about" class="about container reveal" tabindex="-1">
       <h2>O mnie</h2>
       <div class="about-grid">
         <div class="about-text">
-          <p>Jestem frontend developerem specjalizującym się w budowaniu interaktywnych i dostępnych aplikacji webowych. Lubię animacje i czysty kod.</p>
+          <p>Jestem frontend developerem specjalizujcym si w budowaniu interaktywnych i dostpnych aplikacji webowych. Lubi animacje i czysty kod.</p>
         </div>
         <div class="about-avatar" aria-hidden="true">
           <img src="assets/avatar-placeholder.svg" alt="Avatar" />
@@ -56,58 +58,69 @@
       </div>
     </section>
 
-    <section id="skills" class="skills container">
-      <h2>Umiejętności</h2>
+    <section id="skills" class="skills container reveal" aria-label="Umiejci">
+      <h2>Umiejci</h2>
       <div class="skills-list">
-        <div class="skill" data-skill="90"><h3>HTML & CSS</h3><div class="skill-bar"><span></span></div></div>
-        <div class="skill" data-skill="85"><h3>JavaScript</h3><div class="skill-bar"><span></span></div></div>
-        <div class="skill" data-skill="75"><h3>React</h3><div class="skill-bar"><span></span></div></div>
+        <div class="skill" data-skill="90" aria-label="HTML i CSS: 90 procent"><h3>HTML & CSS</h3><div class="skill-bar" aria-hidden="true"><span></span></div></div>
+        <div class="skill" data-skill="85" aria-label="JavaScript: 85 procent"><h3>JavaScript</h3><div class="skill-bar" aria-hidden="true"><span></span></div></div>
+        <div class="skill" data-skill="75" aria-label="React: 75 procent"><h3>React</h3><div class="skill-bar" aria-hidden="true"><span></span></div></div>
       </div>
     </section>
 
-    <section id="projects" class="projects container">
+    <section id="projects" class="projects container reveal" aria-label="Projekty">
       <h2>Wybrane projekty</h2>
       <div class="projects-grid">
-        <article class="project-card" tabindex="0">
+        <article class="project-card" tabindex="0" data-title="Projekt A" data-desc="Interaktywny dashboard z animacjami i responsywnnym ukadem" data-color="linear-gradient(135deg,#74b9ff,#a29bfe)">
           <div class="project-media" style="background:linear-gradient(135deg,#74b9ff,#a29bfe)"></div>
           <h3>Projekt A</h3>
-          <p>Krótki opis projektu. Kliknij, aby zobaczyć szczegóły.</p>
+          <p>Krty opis projektu. Kliknij, aby zobaczy szczegty.</p>
         </article>
-        <article class="project-card" tabindex="0">
+        <article class="project-card" tabindex="0" data-title="Projekt B" data-desc="Sklep e-commerce z minimalnym checkoutem" data-color="linear-gradient(135deg,#fdcb6e,#e17055)">
           <div class="project-media" style="background:linear-gradient(135deg,#fdcb6e,#e17055)"></div>
           <h3>Projekt B</h3>
-          <p>Krótki opis projektu.</p>
+          <p>Krty opis projektu.</p>
         </article>
       </div>
     </section>
 
-    <section id="contact" class="contact container">
+    <section id="contact" class="contact container reveal" aria-label="Kontakt">
       <h2>Kontakt</h2>
-      <form id="contact-form" novalidate>
+      <form id="contact-form" novalidate aria-describedby="contact-help">
+        <p id="contact-help" class="sr-only">Pola oznaczone jako wymagane musz by wypenione.</p>
         <div class="form-row">
-          <label for="name">Imię</label>
-          <input id="name" name="name" required />
+          <label for="name">Imi</label>
+          <input id="name" name="name" required aria-required="true" />
         </div>
         <div class="form-row">
           <label for="email">Email</label>
-          <input id="email" name="email" type="email" required />
+          <input id="email" name="email" type="email" required aria-required="true" />
         </div>
         <div class="form-row">
-          <label for="message">Wiadomość</label>
-          <textarea id="message" name="message" rows="5" required></textarea>
+          <label for="message">Wiadomo</label>
+          <textarea id="message" name="message" rows="5" required aria-required="true"></textarea>
         </div>
         <div class="form-row">
-          <button class="btn btn-primary" type="submit">Wyślij</button>
+          <button class="btn btn-primary" type="submit">Wylij</button>
         </div>
       </form>
     </section>
 
   </main>
 
-  <footer class="site-footer container">
-    <p>© 2026 Imię Nazwisko • <a href="#contact">Kontakt</a></p>
+  <footer class="site-footer container" role="contentinfo">
+    <p> 2026 Imi9 Nazwisko  <a href="#contact">Kontakt</a></p>
   </footer>
 
-  <script src="scripts.js"></script>
+  <!-- Modal for project details -->
+  <div id="project-modal" class="modal" role="dialog" aria-modal="true" aria-hidden="true" aria-labelledby="modal-title">
+    <div class="modal-panel" role="document">
+      <button class="modal-close" aria-label="Zamknij">✕</button>
+      <div class="modal-media" aria-hidden="true"></div>
+      <h3 id="modal-title"></h3>
+      <p id="modal-desc"></p>
+    </div>
+  </div>
+
+  <script src="scripts.js" defer></script>
 </body>
 </html>
