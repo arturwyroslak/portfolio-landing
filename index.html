@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="pl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Imię Nazwisko — Frontend Developer</title>
+  <meta name="description" content="Portfolio — frontend developer. Interaktywne projekty, umiejętności, kontakt.">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <nav class="nav container">
+      <a class="brand" href="#">Imię Nazwisko</a>
+      <button class="nav-toggle" aria-expanded="false" aria-controls="primary-menu">Menu</button>
+      <ul id="primary-menu" class="nav-list" hidden>
+        <li><a href="#about">O mnie</a></li>
+        <li><a href="#skills">Umiejętności</a></li>
+        <li><a href="#projects">Projekty</a></li>
+        <li><a href="#contact">Kontakt</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container hero-inner">
+        <h1 class="hero-title">Cześć, jestem <span class="accent">Imię</span><br>Tworzę interfejsy które działają.</h1>
+        <p class="hero-sub">Frontend Developer • React, TypeScript, Animacje CSS & JS</p>
+        <p>
+          <a class="btn btn-primary" href="#projects">Zobacz projekty</a>
+          <a class="btn" href="#contact">Skontaktuj się</a>
+        </p>
+      </div>
+      <svg class="hero-bg" aria-hidden="true" viewBox="0 0 800 600" preserveAspectRatio="xMidYMid slice">
+        <defs>
+          <linearGradient id="g1" x1="0" x2="1">
+            <stop offset="0" stop-color="#6C5CE7"/>
+            <stop offset="1" stop-color="#00B894"/>
+          </linearGradient>
+        </defs>
+        <circle cx="200" cy="200" r="300" fill="url(#g1)" opacity="0.15"></circle>
+        <circle cx="600" cy="100" r="200" fill="#FFEAA7" opacity="0.08"></circle>
+      </svg>
+    </section>
+
+    <section id="about" class="about container">
+      <h2>O mnie</h2>
+      <div class="about-grid">
+        <div class="about-text">
+          <p>Jestem frontend developerem specjalizującym się w budowaniu interaktywnych i dostępnych aplikacji webowych. Lubię animacje i czysty kod.</p>
+        </div>
+        <div class="about-avatar" aria-hidden="true">
+          <img src="assets/avatar-placeholder.svg" alt="Avatar" />
+        </div>
+      </div>
+    </section>
+
+    <section id="skills" class="skills container">
+      <h2>Umiejętności</h2>
+      <div class="skills-list">
+        <div class="skill" data-skill="90"><h3>HTML & CSS</h3><div class="skill-bar"><span></span></div></div>
+        <div class="skill" data-skill="85"><h3>JavaScript</h3><div class="skill-bar"><span></span></div></div>
+        <div class="skill" data-skill="75"><h3>React</h3><div class="skill-bar"><span></span></div></div>
+      </div>
+    </section>
+
+    <section id="projects" class="projects container">
+      <h2>Wybrane projekty</h2>
+      <div class="projects-grid">
+        <article class="project-card" tabindex="0">
+          <div class="project-media" style="background:linear-gradient(135deg,#74b9ff,#a29bfe)"></div>
+          <h3>Projekt A</h3>
+          <p>Krótki opis projektu. Kliknij, aby zobaczyć szczegóły.</p>
+        </article>
+        <article class="project-card" tabindex="0">
+          <div class="project-media" style="background:linear-gradient(135deg,#fdcb6e,#e17055)"></div>
+          <h3>Projekt B</h3>
+          <p>Krótki opis projektu.</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="contact" class="contact container">
+      <h2>Kontakt</h2>
+      <form id="contact-form" novalidate>
+        <div class="form-row">
+          <label for="name">Imię</label>
+          <input id="name" name="name" required />
+        </div>
+        <div class="form-row">
+          <label for="email">Email</label>
+          <input id="email" name="email" type="email" required />
+        </div>
+        <div class="form-row">
+          <label for="message">Wiadomość</label>
+          <textarea id="message" name="message" rows="5" required></textarea>
+        </div>
+        <div class="form-row">
+          <button class="btn btn-primary" type="submit">Wyślij</button>
+        </div>
+      </form>
+    </section>
+
+  </main>
+
+  <footer class="site-footer container">
+    <p>© 2026 Imię Nazwisko • <a href="#contact">Kontakt</a></p>
+  </footer>
+
+  <script src="scripts.js"></script>
+</body>
+</html>
